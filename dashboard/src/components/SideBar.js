@@ -1,5 +1,6 @@
 import React from 'react';
 import image from '../assets/images/logo-DH.png';
+import { Link } from 'react-router-dom';
 
 function SideBar(){
     return(
@@ -19,9 +20,10 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Dashboard -->*/}
                 <li className="nav-item active">
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></a>
+                        <span>Dashboard - DH movies</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -30,26 +32,36 @@ function SideBar(){
                 {/*<!-- Heading -->*/}
                 <div className="sidebar-heading">Actions</div>
 
-                {/*<!-- Nav Item - Pages -->*/}
-                <li className="nav-item">
-                    <a className="nav-link collapsed" href="/">
-                        <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
-                    </a>
-                </li>
-
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/allGenres">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></a>
+                        <span>Géneros</span>
+                    </Link>
+                </li>
+
+                {/*<!-- Nav Item - Pages -->*/}
+                <li className="nav-item">
+                    <Link className="nav-link collapsed" to="/lastMovie">
+                        <i className="fas fa-fw fa-folder"></i>
+                        <span>Última película en BD</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/allMovies">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></a>
+                        <span>Películas</span>
+                    </Link>
+                </li>
+
+                {/*<!-- Nav Item - Tables -->*/}
+                <li className="nav-item">
+                    <Link className="nav-link" to="/404">
+                        <i className="fas fa-fw fa-question"></i>
+                        <span>404</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
